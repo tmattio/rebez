@@ -1,6 +1,6 @@
-[![Build Status](https://dev.azure.com/javierchavarri/javier_chavarri/_apis/build/status/jchavarri.rebez?branchName=master)](https://dev.azure.com/javierchavarri/javier_chavarri/_build/latest?definitionId=1&branchName=master)
+# Rebez
 
-# rebez
+[![Actions Status](https://github.com/jchavarri/rebez/workflows/CI/badge.svg)](https://github.com/jchavarri/rebez/actions)
 
 Cubic bezier implementation in Reason / OCaml.
 
@@ -12,8 +12,15 @@ Implementing efficient lookup is not easy because it implies projecting the X co
 
 > It is heavily based on implementations available in Firefox and Chrome (for the CSS transition-timing-function property).
 
+## Installation
 
-## Install
+### Using Opam
+
+```bash
+opam install rebez
+```
+
+### Using Esy
 
 With `esy`, add to your `package.json`:
 
@@ -28,7 +35,7 @@ With `esy`, add to your `package.json`:
 }
 ```
 
-## Using
+## Usage
 
 In Reason:
 
@@ -46,18 +53,6 @@ let easing = Rebez.make 0. 0.99 0. 0.99
 let value = easing 0.01  (* 0.512011914581 *)
 ```
 
-## Developing:
+## Contributing
 
-```
-npm install -g esy
-git clone https://github.com/jchavarri/rebez/
-esy install
-esy build
-```
-
-## Running Tests:
-
-```
-# Runs the "test" command in `package.json`.
-esy test
-```
+Take a look at our [Contributing Guide](CONTRIBUTING.md).
